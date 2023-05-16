@@ -1,9 +1,9 @@
 class Empregado:
-    def init(nome, sobrenome, cargo, salario):
+    def __init__(self, nome, sobrenome, cargo, salario):
         self.nome = nome
         self.sobrenome = sobrenome
         self.cargo = cargo
-        self.salario = 1500
+        self.salario = salario
         self.taxa = 1.05
 
     def calcular_reajuste(self):
@@ -12,7 +12,7 @@ class Empregado:
         return reajuste
 
     def nome_completo(self):
-        return self.nome + self.sobrenome
+        return self.nome + ' ' + self.sobrenome
 
     def validar_cargo(self):
         lista = ['presidente', 'diretor', 'gerente', 'analista', 'auxiliar']
